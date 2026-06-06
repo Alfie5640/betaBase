@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/css/login.css">
+
+</head>
+
+<body>
+
+    <div class="maincontent">
+
+        <div class="tab-header">
+            <div class="tab-indicator"></div>
+            <div class="tab active" id="loginTab">Login</div>
+            <div class="tab" id="registerTab">Register</div>
+        </div>
+
+        <div class="form-container">
+            <form id="loginForm" class="form active">
+                <input type="text" id="loginUsername" placeholder="Username:" required>
+
+                <input type="password" id="loginPassword" placeholder="Password:" required>
+
+                <input type="submit" value="Login">
+            </form>
+
+            <form id="registerForm" class="form">
+                <input type="text" id="regUsername" placeholder="Username:" required>
+
+                <input type="email" id="regEmail" placeholder="Email:" required>
+
+                <input type="password" id="regPassword" placeholder="Password:" required>
+
+                <input type="password" id="regPasswordConfirm" placeholder="Confirm Password:" required>
+
+                <input type="submit" value="Register">
+            </form>
+        </div>
+
+        <div id="error">
+        </div>
+
+    </div>
+
+    <script src="/js/login.js"></script>
+</body>
+
+</html>
