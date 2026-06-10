@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="module">
+            import { requireAuth } from "/js/auth.js";
+
+            const user = await requireAuth();
+
+            if (user) {
+                document.getElementById('name').textContent = user.username;
+            }   
+        </script>
+
+    </head>
+    <body>
+        <div id="name"></div>
+        <ul>
+            <li><a href="/pages/index.html">Home</a></li>
+            <li><a href="/pages/mySessions">Sessions</a></li>
+            <li><a href="/pages/createSessions.html">+</a></li>
+            <li><a href="/pages/friends">Friends</a></li>
+            <li><a href="/pages/profile">Profile</a></li>
+        </ul>
+    </body>
+
+</html>

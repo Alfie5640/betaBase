@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Session</title>
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/createSession.css">
+    </head>
+    <body>
+        <div class="maincontent">
+            <h1>Create Session</h1>
+
+            <form id="createSessionForm">
+                <input type="text" id="place" placeholder="Place:" required>
+
+                <input type="date" id="date" required>
+
+                <input type="time" id="timeStart" required>
+
+                <input type="time" id="timeEnd">
+
+                <div class="checkboxes">
+                    <label>
+                        <input type="checkbox" id="needsTrBelayer">
+                        Need TR Belayer
+                    </label>
+                    <label>
+                        <input type="checkbox" id="needsLeadBelayer">
+                        Need Lead Belayer
+                    </label>
+                </div>
+
+                <input type="text" id="otherNeed" placeholder="Other (optional):">
+
+                <textarea id="notes" placeholder="Additional notes (optional):"></textarea>
+
+                <input type="submit" value="Create Session">
+            </form>
+
+            <div id="error"></div>
+        </div>
+
+        <script type="module" src="/js/createSession.js"></script>
+    </body>
+</html>
