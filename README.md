@@ -8,7 +8,7 @@ Climbing Calendar helps climbers coordinate sessions without relying on scattere
 
 Users can create climbing plans, share their availability, find belayers, and join sessions organised by other climbers.
 
-The goal is to make it EASY for climbers to answer:
+The goal is to make it easy for climbers to answer:
 
 - Who is climbing tonight?
 - Does anyone need a belayer on Saturday?
@@ -26,7 +26,7 @@ The goal is to make it EASY for climbers to answer:
 ### Climbing Sessions
 
 - Create climbing sessions
-- View upcoming sessions
+- View upcoming sessions (friends only)
 - Update or cancel plans
 - Specify location, date, and time
 
@@ -60,10 +60,7 @@ The goal is to make it EASY for climbers to answer:
 - Gym-specific locations
 - Push notifications
 - Calendar integration
-- Dedicated mobile application
 
 ## Project Status
 
 Currently in active development
-
-The initial focus is on allowing climbers to create sessions, advertise availability, and connect with climbing friends
