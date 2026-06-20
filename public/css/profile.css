@@ -1,0 +1,44 @@
+.maincontent {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#topSect {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#profilePic {
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+#profileName {
+    flex: 1;
+    min-height: 100px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-left: 45px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+#bio {
+    min-height: 200px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#settings {
+    min-height: 300px;
+    border: 2px solid white;
+    border-radius: 10px;
+}

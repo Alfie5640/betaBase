@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
                 const div = document.createElement("div");
 
                 div.innerHTML = `
+                    <h2>Host: ${session.user.username}</h2>
                     <h3>${session.place}</h3>
                     <p>${session.date}</p>
                     <p>${session.time_start} - ${session.time_end ?? "Unknown"}</p>
