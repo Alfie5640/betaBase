@@ -9,14 +9,46 @@
 
         <div class="maincontent">
             <div id="topSect">
-                <div id="profilePic"></div>
+                <div id="profilePic">
+                    <img id="profilePicImg" src="" alt="Profile picture">
+                </div>
                 <div id="profileName"></div>
             </div>
 
-            <div id="bio"></div>
-            <div id="settings"></div>
-        </div>
+            <div id="bio">
+                <form id="bioForm">
+                    <label for="bioInput">Bio</label>
+                    <textarea id="bioInput" name="bio" maxlength="500"></textarea>
+                    <button type="submit">Save Bio</button>
+                </form>
+            </div>
 
+            <div id="settings">
+                <form id="pictureForm">
+                    <label for="pictureInput">Profile picture</label>
+                    <input type="file" id="pictureInput" name="profile_picture" accept="image/png, image/jpeg, image/webp">
+                    <button type="submit">Upload</button>
+                </form>
+
+                <form id="changeUserForm">
+                    <label for="username">Change username</label>
+                    <input type="text" id="username" name="username">
+                    <button type="submit">Submit</button>
+                </form>
+
+                <form id="changePassForm">
+                    <label for="currPass">Enter current password</label>
+                    <input type="password" id="currPass" name="current_pass">
+
+                    <label for="newPass">Enter new password</label>
+                    <input type="password" id="newPass" name="change_pass">
+
+                    <label for="confirmPass">Confirm new password</label>
+                    <input type="password" id="confirmPass" name="confirm_pass">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
 
     </body>
     <script type="module" src="/js/profile.js"></script>

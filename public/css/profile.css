@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 #topSect {
@@ -17,6 +19,15 @@
     border: 2px solid white;
     border-radius: 50%;
     flex-shrink: 0;
+    overflow: hidden;          /* clips the image to the circle */
+    background: rgba(255, 255, 255, 0.05);
+}
+
+#profilePic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* fills the circle, crops instead of stretching */
+    display: block;
 }
 
 #profileName {
@@ -35,10 +46,80 @@
     min-height: 200px;
     border: 2px solid white;
     border-radius: 10px;
+    padding: 1.5rem;
+    color: white;
 }
 
 #settings {
     min-height: 300px;
     border: 2px solid white;
     border-radius: 10px;
+    padding: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Shared form styling for #bio and #settings */
+
+#bioForm, #pictureForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#bioForm label, #pictureForm label {
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#bioInput {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 0.75rem;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#bioInput:focus, #pictureInput:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+#pictureInput {
+    color: white;
+}
+
+#bioForm button, #pictureForm button {
+    align-self: flex-start;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+#bioForm button:hover, #pictureForm button:hover {
+    opacity: 0.85;
+}
+
+/* Responsive: stack the top section on small screens */
+@media (max-width: 500px) {
+    #topSect {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
 }
