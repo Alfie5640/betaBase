@@ -28,11 +28,18 @@ document.addEventListener("DOMContentLoaded", async (e) => {
                 const div = document.createElement("div");
 
                 div.innerHTML = `
-                    <h2>Host: ${session.user.username}</h2>
-                    <h3>${session.place}</h3>
-                    <p>${session.date}</p>
-                    <p>${session.time_start} - ${session.time_end ?? "Unknown"}</p>
-                `;
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <img 
+                        src="${session.user.profile_picture ? `/storage/${session.user.profile_picture}` : '/images/default-avatar.png'}" 
+                        alt="${session.user.username}" 
+                        style="width:32px; height:32px; border-radius:50%; object-fit:cover;"
+                    >
+                    <h2>${session.user.username}</h2>
+                </div>
+                <h3>${session.place}</h3>
+                <p>${session.date}</p>
+                <p>${session.time_start} - ${session.time_end ?? "Unknown"}</p>
+            `;
 
                 resultDiv.appendChild(div);
             });
