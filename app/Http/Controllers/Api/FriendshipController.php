@@ -11,7 +11,16 @@ class FriendshipController extends Controller {
 
     public function sendRequest(Request $request) {
         $request->validate([
-            'friend_id' => 'required|integer|exists:users,id|different:' . $request->user()->id,
+            'friend_id' => [
+                'required',
+                'integer',
+                'exists:users,id',
+                function ($attribute, $value, $fail) use ($request) {
+                    if ((int) $value === $request->user()->id) {
+                        $fail('You cannot send a friend request to yourself.');
+                    }
+                },
+            ],
         ]);
 
         $alreadyExists = $request->user()->sentFriendRequests()

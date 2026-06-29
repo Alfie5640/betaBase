@@ -9,12 +9,12 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-    Schema::table('users', function (Blueprint $table) {
-        $table->dropColumn('email');
-        $table->string('username')->unique()->after('name');
-    });
+    public function up(): void {
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropUnique('users_email_unique');
+            $table->dropColumn('email');
+            $table->string('username')->unique()->after('name');
+        });
     }
 
     public function down(): void
